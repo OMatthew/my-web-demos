@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 1073741824,
+"dataUrl": "zengardendemo.data.unityweb",
+"asmCodeUrl": "zengardendemo.asm.code.unityweb",
+"asmMemoryUrl": "zengardendemo.asm.memory.unityweb",
+"asmFrameworkUrl": "zengardendemo.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
