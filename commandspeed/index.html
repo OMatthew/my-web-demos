@@ -10,6 +10,12 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/commandspeed.json", {onProgress: UnityProgress});
+      onkeydown = function(e){
+      if(e.ctrlKey || e.altKey || e.metaKey){
+      e.preventDefault();
+      alert("Shotcut Pressed")
+  }
+}
     </script>
   </head>
   <body>
