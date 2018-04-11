@@ -22,17 +22,17 @@
       margin: 0;
       padding: 0;
     }
-
+/*
     canvas
     {
       width: auto;
       max-height: 100%;
       position: absolute;
-    }
+    }*/
 
     #gameContainer {
-      width: auto; 
-      max-height: 100%; 
+      max-width: 100%; 
+      height: auto; 
       position: absolute;
     }
 
@@ -40,7 +40,7 @@
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 1200px; height: 675px"></div>
+      <div id="gameContainer" style="width: 100%; height: 100%"></div>
       <!--<div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
