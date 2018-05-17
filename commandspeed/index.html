@@ -24,11 +24,33 @@
       overflow: hidden;
     }
 
+    #gameContainer{
+      width: 1200px;
+      height: 675px;
+
+    }
+
+    @media only screen and (max-height: 700px) {
+      #gameContainer{
+        width: 1067px;
+        height: 600px;
+
+        }
+    }
+
+    @media only screen and (max-height: 600px) {
+      #gameContainer{
+        width: 889px;
+        height: 500px;
+
+        }
+    }
+
     </style>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 1200px; height: 675px"></div>
+      <div id="gameContainer"></div>
       <div class="footer">
         <!--<div class="webgl-logo"></div>-->
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
