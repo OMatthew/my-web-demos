@@ -11,14 +11,33 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/fiestaGarden_web.json", {onProgress: UnityProgress});
     </script>
+    <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .webgl-content{
+      width: 100%!important;
+      height: 100%!important;
+
+    }
+
+    #gameContainer{
+      width: 100%!important;
+      height: 100%!important;
+
+    }
+
+  </style>
   </head>
   <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 1200px; height: 675px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
+      <!--<div class="footer">
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Fiesta Garden</div>
+        <div class="title">Fiesta Garden</div>-->
       </div>
     </div>
   </body>
