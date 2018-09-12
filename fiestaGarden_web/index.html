@@ -10,6 +10,7 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/fiestaGarden_web.json", {onProgress: UnityProgress});
+
     </script>
     <style type="text/css">
     * {
@@ -19,15 +20,13 @@
     }
 
     .webgl-content{
-      width: 100%!important;
-      height: 100%!important;
-
+      width: 100vw!important;
+      height: 100vh!important;
     }
 
     #gameContainer{
       width: 100%!important;
       height: 100%!important;
-
     }
 
   </style>
@@ -40,5 +39,24 @@
         <div class="title">Fiesta Garden</div>-->
       </div>
     </div>
+    <script type="text/javascript">
+
+      function Resize() {
+      var canvas = document.getElementById("#canvas");
+      var content = document.getElementById("gameContainer");
+
+      var displayWidth  = content.clientWidth;
+      var displayHeight = content.clientHeight;
+
+    if (canvas.width  != displayWidth ||
+      canvas.height != displayHeight) {
+
+      canvas.width  = displayWidth;
+      canvas.height = displayHeight;
+    }
+  }
+  window.onresize = Resize;
+
+    </script>
   </body>
 </html>
