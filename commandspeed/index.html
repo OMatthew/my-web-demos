@@ -15,6 +15,7 @@
       e.preventDefault();
       }
     }
+
     </script>
     <style type="text/css">
     * {
@@ -47,13 +48,17 @@
     }*/
 
      .webgl-content{
-      width: 100vw!important;
-      height: 100vh!important;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align:center;
     }
 
     #gameContainer{
-      width: 100%!important;
-      height: 100%!important;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     </style>
@@ -66,10 +71,16 @@
 
       function Resize() {
       var canvas = document.getElementById("#canvas");
-      var content = document.getElementById("gameContainer");
+      if(canvas == null)
+      {
+        setTimeout(function() {
+          Resize();
+        }, 100);
+        return;
+      }
 
-      var displayWidth  = content.clientWidth;
-      var displayHeight = content.clientHeight;
+      var displayHeight = Math.min(window.innerHeight, window.innerWidth * 9 / 16);
+      var displayWidth  = Math.min(window.innerWidth, displayHeight * 16 / 9);
 
     if (canvas.width  != displayWidth ||
       canvas.height != displayHeight) {
@@ -78,6 +89,8 @@
       canvas.height = displayHeight;
     }
   }
+
+  window.onload = Resize;
   window.onresize = Resize;
 
     </script>
