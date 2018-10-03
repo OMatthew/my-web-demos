@@ -71,16 +71,17 @@
 
       function Resize() {
       var canvas = document.getElementById("#canvas");
+      var container = document.getElementById("#gameContainer");
+
+      var displayHeight = Math.min(window.innerHeight, window.innerWidth * 9 / 16);
+      var displayWidth  = Math.min(window.innerWidth, displayHeight * 16 / 9);
+
       if(canvas == null)
       {
         setTimeout(function() {
           Resize();
         }, 100);
-        return;
       }
-
-      var displayHeight = Math.min(window.innerHeight, window.innerWidth * 9 / 16);
-      var displayWidth  = Math.min(window.innerWidth, displayHeight * 16 / 9);
 
     if (canvas.width  != displayWidth ||
       canvas.height != displayHeight) {
@@ -88,8 +89,15 @@
       canvas.width  = displayWidth;
       canvas.height = displayHeight;
     }
-  }
 
+    if(canvas.height != displayHeight || canvas.width != displayWidth)
+      {
+        setTimeout(function() {
+          Resize();
+        }, 100);
+      }
+  }
+  
   window.onload = Resize;
   window.onresize = Resize;
 
