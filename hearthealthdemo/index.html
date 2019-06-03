@@ -43,7 +43,7 @@
       var container = document.getElementById("#unityContainer");
 
       var displayHeight = Math.min(window.innerHeight, window.innerWidth * 9 / 16);
-      //var displayWidth  = Math.min(window.innerWidth, displayHeight * 9 / 16);
+      var displayWidth  = displayHeight * 9 / 16;
 
       if(canvas == null)
       {
@@ -52,14 +52,13 @@
         }, 100);
       }
 
-    if (/*canvas.width  != displayWidth ||*/
-      canvas.height != displayHeight) {
+    if (canvas.width  != displayWidth || canvas.height != displayHeight) {
 
-      //canvas.width  = displayWidth;
+      canvas.width  = displayWidth;
       canvas.height = displayHeight;
     }
 
-    if(canvas.height != displayHeight /*|| canvas.width != displayWidth*/)
+    if(canvas.height != displayHeight || canvas.width != displayWidth)
       {
         setTimeout(function() {
           Resize();
