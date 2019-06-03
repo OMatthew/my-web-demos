@@ -39,26 +39,26 @@
     <script type="text/javascript">
 
       function Resize() {
-      var canvas = document.getElementById("#canvas");
+      //var canvas = document.getElementById("#canvas");
       var container = document.getElementById("#unityContainer");
 
       var displayHeight = window.innerHeight;
       var displayWidth  = displayHeight * (9 / 16);
 
-      if(canvas == null)
+      if(container == null)
       {
         setTimeout(function() {
           Resize();
         }, 100);
       }
 
-    if (canvas.width  != displayWidth || canvas.height != displayHeight) {
+    if (container.width  != displayWidth || container.height != displayHeight) {
 
-      canvas.width  = displayWidth;
-      canvas.height = displayHeight;
+      container.width  = displayWidth;
+      container.height = displayHeight;
     }
 
-    if(canvas.height != displayHeight || canvas.width != displayWidth)
+    if(container.height != displayHeight || container.width != displayWidth)
       {
         setTimeout(function() {
           Resize();
