@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Heart Health Mountain</title>
+    <title>Heart Health Mountain</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "Build/WebGL.json");
@@ -34,13 +34,13 @@
     </style>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer"></div>
+      <div id="unityContainer"></div>
     </div>
     <script type="text/javascript">
 
       function Resize() {
       var canvas = document.getElementById("#canvas");
-      var container = document.getElementById("#gameContainer");
+      var container = document.getElementById("#unityContainer");
 
       var displayHeight = Math.min(window.innerHeight, window.innerWidth * 16 / 9);
       var displayWidth  = Math.min(window.innerWidth, displayHeight * 9 / 16);
