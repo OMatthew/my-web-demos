@@ -52,13 +52,13 @@
         }, 100);
       }
 
-    if (canvas.width  != displayWidth || canvas.height != displayHeight) {
+    if (container.width  != displayWidth || container.height != displayHeight) {
 
-      canvas.width  = displayWidth;
-      canvas.height = displayHeight;
+      container.width  = displayWidth;
+      container.height = displayHeight;
     }
 
-    if(canvas.height != displayHeight || canvas.width != displayWidth)
+    if(ccontainer.height != displayHeight || container.width != displayWidth)
       {
         setTimeout(function() {
           Resize();
