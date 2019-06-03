@@ -42,8 +42,8 @@
       var canvas = document.getElementById("#canvas");
       var container = document.getElementById("#unityContainer");
 
-      var displayHeight = Math.min(window.innerHeight, window.innerWidth * 9 / 16);
-      var displayWidth  = displayHeight * 9 / 16;
+      var displayHeight = window.innerHeight;
+      var displayWidth  = displayHeight * (9 / 16);
 
       if(canvas == null)
       {
