@@ -26,7 +26,42 @@
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 332px; height: 700px"></div>
+      <div id="unityContainer"></div>
     </div>
+    <script type="text/javascript">
+
+      function Resize() {
+      var canvas = document.getElementById("#canvas");
+      var container = document.getElementById("#unityContainer");
+
+      var displayHeight = window.innerHeight;
+      var displayWidth  = displayHeight * (9 / 19);
+
+      if(canvas == null)
+      {
+        setTimeout(function() {
+          Resize();
+        }, 100);
+      }
+
+    if (canvas.width  != displayWidth ||
+      canvas.height != displayHeight) {
+
+      canvas.width  = displayWidth;
+      canvas.height = displayHeight;
+    }
+
+    if(canvas.height != displayHeight || canvas.width != displayWidth)
+      {
+        setTimeout(function() {
+          Resize();
+        }, 100);
+      }
+  }
+  
+  window.onload = Resize;
+  window.onresize = Resize;
+
+    </script>
   </body>
 </html>
