@@ -1,7 +1,7 @@
 {
 "companyName": "University of Texas at Austin",
 "productName": "Heart Health Mountain",
-"productVersion": "1.2.1",
+"productVersion": "1.2.2",
 "dataUrl": "hearthealthdemo.data.unityweb",
 "wasmCodeUrl": "hearthealthdemo.wasm.code.unityweb",
 "wasmFrameworkUrl": "hearthealthdemo.wasm.framework.unityweb",
